@@ -24,8 +24,11 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploying application'
+    steps {
+        sh 'cp index.html /var/www/html/'
+        echo 'Website deployed successfully'
+    }
+}
             }
         }
 
