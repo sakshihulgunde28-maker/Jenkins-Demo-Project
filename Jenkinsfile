@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 node {
 
     stage('Compile C Program') {
@@ -15,7 +15,11 @@ node {
         echo "Running C program..."
 
         sh './hello'
-=======
+
+    }
+
+}
+
 
 pipeline {
 
