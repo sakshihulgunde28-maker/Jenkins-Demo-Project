@@ -19,6 +19,24 @@ node {
     }
 
 }
+node {
+
+    stage('Checkout') {
+        checkout scm
+    }
+
+    stage('Compile C Program') {
+        echo "Compiling C program..."
+        sh 'ls -la'
+        sh 'gcc hello.c -o hello'
+    }
+
+    stage('Run C Program') {
+        echo "Running C program..."
+        sh './hello'
+    }
+
+}
 
 
 pipeline {
