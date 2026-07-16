@@ -51,7 +51,7 @@ pipeline {
                 echo 'Website deployed successfully'
             }
         }
->>>>>>> 15ffc5d1e8520be4aa544af98e46e490a92bd54a
+
 
     }
 
