@@ -1,42 +1,24 @@
 
 node {
 
-    stage('Compile C Program') {
-
-        echo "Compiling C program..."
-
-        sh 'gcc hello.c -o hello'
-
-    }
-
-
-    stage('Run C Program') {
-
-        echo "Running C program..."
-
-        sh './hello'
-
-    }
-
-}
-node {
-
     stage('Checkout') {
         checkout scm
     }
 
-    stage('Compile C Program') {
-        echo "Compiling C program..."
+    stage('Check Files') {
+        sh 'pwd'
         sh 'ls -la'
+    }
+
+    stage('Compile C Program') {
         sh 'gcc hello.c -o hello'
     }
 
     stage('Run C Program') {
-        echo "Running C program..."
         sh './hello'
     }
-
 }
+
 
 
 pipeline {
